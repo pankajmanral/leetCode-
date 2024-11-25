@@ -1,6 +1,6 @@
 ''' 
 
-here :
+here,
     the 0's in the nums1 list represent the empty spaces that have to be filled with the nums from the second list in sorted order
     p1,p2 are the last number in the respective list that should be compared
     we get the last number by m and n respectively 
@@ -39,6 +39,7 @@ def mergeArray(nums1,nums2,m,n)->list:
         p2 -= 1
         index -= 1
 
-    print(nums1)
+    return nums1
 
-mergeArray(nums1,nums2,m,n)
+result = mergeArray(nums1,nums2,m,n)
+print(result)
