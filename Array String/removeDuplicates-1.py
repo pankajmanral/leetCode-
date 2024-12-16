@@ -11,17 +11,24 @@ here,
 '''
 
 def removeDuplicates(nums:list) -> int:
-    k = 0
-    for i in range(len(nums)-1):
-        if nums[i] != nums[i+1]:
-            nums[k] = nums[i]
-            k += 1
-    nums[k] = nums[-1]
-    k+=1
-    print(nums[:k])
-    return k
+    k = []
+    # for i in range(len(nums)-1):
+    #     if nums[i] != nums[i+1]:
+    #         nums[k] = nums[i]
+    #         k += 1
+    # nums[k] = nums[-1]
+    # k+=1
+    # print(nums[:k])
+    # return k
     
-nums = [0,0,1,1,1,2,2,3,3,4,4]
+    for i in nums:
+        if i not in k:
+            k.append(i)
+
+    print(k)
+    return len(k)
+
+nums = [0,0,1,1,1,2,2,3,3,4]
 
 result = removeDuplicates(nums)
 

@@ -9,18 +9,21 @@ here,
 '''
 
 def removeDuplicatesII(nums:list)->int:
-    k = 0
+    k = 1
     counter = 1
     for i in range(1,len(nums)):
         if nums[i] == nums[i-1]:
             counter += 1
-        counter = 1
+        else:
+            counter = 1
 
         if counter <= 2:
             nums[k] = nums[i]
             k += 1
+    print(nums[:k])
+    return k
 
-nums = [1,1,1,2,2,3]
+nums = [0,0,1,1,1,1,2,3,3]
 
 result = removeDuplicatesII(nums)
-print(nums)
+print(result)
